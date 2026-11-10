@@ -187,3 +187,39 @@ export const certifications = [
     ],
   },
 ];
+
+// Titles were inferred from the LinkedIn URL slugs (LinkedIn blocks automated reads), so check wording against the originals.
+export const articles = [
+  {
+    title: 'Same Loop, Different Levels: Human',
+    href: 'https://www.linkedin.com/pulse/same-loop-different-levels-human-mario-tristan-h8ouc/',
+  },
+  {
+    title: "The Robot Doesn't Sign the Consent Form",
+    href: 'https://www.linkedin.com/pulse/robot-doesnt-sign-consent-form-mario-tristan-h8k5c/',
+  },
+  {
+    title: "The Energy You Can't Fake",
+    href: 'https://www.linkedin.com/pulse/energy-you-cant-fake-mario-tristan-gblic/',
+  },
+  {
+    title: "AI Doesn't Have an Ego, and That's What Should Scare You",
+    href: 'https://www.linkedin.com/pulse/ai-doesnt-have-ego-thats-what-should-scare-you-mario-tristan-cbzfc/',
+  },
+  {
+    title: 'The Power of Mentoring',
+    href: 'https://www.linkedin.com/pulse/power-mentoring-mario-tristan-qw2vc/',
+  },
+  {
+    title: 'Your Career Cards',
+    href: 'https://www.linkedin.com/pulse/your-career-cards-mario-tristan-woxwc/',
+  },
+  {
+    title: 'Dark Matter Developers: The Backbone of Innovation and Stability',
+    href: 'https://www.linkedin.com/pulse/dark-matter-developers-backbone-innovation-stability-mario-ekgie/',
+  },
+  {
+    title: 'Passion and Purpose in Consulting: Why Loving Your Work',
+    href: 'https://www.linkedin.com/pulse/passion-purpose-consulting-why-loving-your-work-tristan-martinez-h3x9f/',
+  },
+];

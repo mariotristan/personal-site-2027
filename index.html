@@ -30,9 +30,11 @@
         document.documentElement.dataset.theme = 'dark';
       }
     </script>
+    <noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
     <script type="module" src="/src/main.js"></script>
   </head>
   <body>
+    <canvas id="net" aria-hidden="true"></canvas>
     <a class="skip" href="#main">Skip to the content</a>
 
     <header class="top">
@@ -43,6 +45,7 @@
           <li><a href="#experience">Experience</a></li>
           <li><a href="#education">Education</a></li>
           <li><a href="#certifications">Certs</a></li>
+          <li><a href="#articles">Articles</a></li>
           <li><a href="#repos">Repos</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -72,7 +75,7 @@
       </section>
 
       <section id="about">
-        <div class="wrap">
+        <div class="wrap reveal">
           <h2>About <em>me</em></h2>
           <p class="sub">Engineering, delivery and a lot of automation.</p>
           <div class="panel">
@@ -88,7 +91,7 @@
       </section>
 
       <section id="experience">
-        <div class="wrap">
+        <div class="wrap reveal">
           <h2>Where I've <em>worked</em></h2>
           <p class="sub">Nearly two decades, from satellite systems to cloud delivery.</p>
           <div class="rows" id="timeline"></div>
@@ -96,7 +99,7 @@
       </section>
 
       <section id="education">
-        <div class="wrap">
+        <div class="wrap reveal">
           <h2><em>Education</em></h2>
           <p class="sub">Computer systems engineering, then IT management.</p>
           <div class="grid" id="education-list"></div>
@@ -104,15 +107,23 @@
       </section>
 
       <section id="certifications">
-        <div class="wrap">
+        <div class="wrap reveal">
           <h2>Certifications &amp; <em>credentials</em></h2>
           <p class="sub">Every badge links to its public verification page.</p>
           <div class="grid certs" id="certs"></div>
         </div>
       </section>
 
+      <section id="articles">
+        <div class="wrap reveal">
+          <h2>Published <em>articles</em></h2>
+          <p class="sub">Writing on AI, mentoring, careers and consulting, published on LinkedIn.</p>
+          <div class="grid" id="article-list"></div>
+        </div>
+      </section>
+
       <section id="repos">
-        <div class="wrap">
+        <div class="wrap reveal">
           <h2>Recently <em>updated</em> repos</h2>
           <p class="sub">
             Live from <a href="https://github.com/mariotristan" target="_blank" rel="noopener noreferrer">github.com/mariotristan</a>,
@@ -125,7 +136,7 @@
       </section>
 
       <section id="contact">
-        <div class="wrap">
+        <div class="wrap reveal">
           <div class="panel center">
             <h2>Get in <em>touch</em></h2>
             <p class="sub centered">

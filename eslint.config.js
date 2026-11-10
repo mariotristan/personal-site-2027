@@ -16,6 +16,8 @@ export default [
         localStorage: 'readonly',
         sessionStorage: 'readonly',
         fetch: 'readonly',
+        matchMedia: 'readonly',
+        requestAnimationFrame: 'readonly',
         IntersectionObserver: 'readonly',
       },
     },
