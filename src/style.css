@@ -29,6 +29,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   transition: background-color 0.3s ease, color 0.3s ease;
   line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 body.dark {
@@ -45,6 +48,9 @@ body.light {
 .navbar {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   background-color: var(--dark-surface) !important;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .navbar-brand {
@@ -111,6 +117,107 @@ main {
   min-height: calc(100vh - 180px);
 }
 
+/* Hero Section */
+.hero-section {
+  padding: 6rem 0;
+  background: linear-gradient(135deg, rgba(63, 81, 181, 0.1) 0%, rgba(245, 184, 46, 0.05) 100%);
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline;
+}
+
+.hero-section h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.hero-section .lead {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.hero-section .btn {
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+  background-color: lighten(var(--primary-color), 10%);
+  border-color: lighten(var(--primary-color), 10%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(63, 81, 181, 0.3);
+}
+
+.btn-outline-primary {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+.hero-image {
+  animation: float 3s ease-in-out infinite;
+}
+
+.avatar {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+}
+
+/* Sections */
+section {
+  scroll-margin-top: 80px;
+}
+
+section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+
+section h2::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  margin: 1rem auto 0;
+  border-radius: 2px;
+}
+
+.bg-secondary {
+  background-color: var(--dark-surface) !important;
+}
+
 /* Footer Styles */
 footer {
   background-color: var(--dark-surface) !important;
@@ -160,12 +267,54 @@ body.light footer a {
   color: var(--light-text) !important;
 }
 
+body.light .bg-secondary {
+  background-color: var(--light-surface) !important;
+}
+
+body.light .hero-section {
+  background: linear-gradient(135deg, rgba(63, 81, 181, 0.05) 0%, rgba(245, 184, 46, 0.02) 100%);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .navbar-nav .nav-link {
     margin-left: 0;
     margin-right: 0;
     padding: 0.5rem 0;
+  }
+
+  .hero-section {
+    padding: 3rem 0;
+    min-height: auto;
+  }
+
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-section .lead {
+    font-size: 1.25rem;
   }
 
   .social-links {
@@ -179,6 +328,18 @@ body.light footer a {
   footer .col-md-6 {
     margin-bottom: 1rem;
   }
+
+  section h2 {
+    font-size: 2rem;
+  }
+
+  .d-flex.gap-3 {
+    flex-direction: column;
+  }
+
+  .btn-lg {
+    width: 100%;
+  }
 }
 
 /* Utility Classes */
@@ -186,12 +347,11 @@ body.light footer a {
   transition: all 0.3s ease;
 }
 
-.btn-primary {
-  background-color: var(--primary-color);
-  border-color: var(--primary-color);
+/* Text Colors */
+.text-muted {
+  color: rgba(255, 255, 255, 0.7) !important;
 }
 
-.btn-primary:hover {
-  background-color: lighten(var(--primary-color), 10%);
-  border-color: lighten(var(--primary-color), 10%);
+body.light .text-muted {
+  color: rgba(0, 0, 0, 0.6) !important;
 }
