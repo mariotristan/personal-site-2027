@@ -29,9 +29,11 @@ Always run `npm run lint && npm run build` before committing.
 
 | Path | Purpose |
 |---|---|
-| `index.html` | Page shell and static copy (hero, section headings, contact). Lives at the repo root, not in `public/`. |
-| `src/data.js` | **All list content**: profile, socials, technologies, experience, education, certifications, articles. Edit content here. |
-| `src/main.js` | Renders `data.js` into the page, theme toggle, GitHub repos fetch, nav highlighting, scroll-reveal, network canvas. |
+| `index.html` | Home page shell and static copy (hero, section headings, contact). Lives at the repo root, not in `public/`. |
+| `resume.html` + `src/resume.js` | Separate resume page (`/resume.html`), rendered from the `resume` export in `data.js`; has print styles, and its "Print / save as PDF" button uses the browser's print dialog (no PDF file is stored). |
+| `src/data.js` | **All list content**: profile, socials, technologies, experience, education, certifications, articles, resume. Edit content here. |
+| `src/main.js` | Home page: renders `data.js`, GitHub repos fetch, nav highlighting. |
+| `src/common.js` | Shared by both pages: theme toggle, scroll reveal, network canvas, card glow. |
 | `src/style.css` | All styling, driven by CSS custom properties; dark default, `[data-theme='light']` override. |
 | `public/` | Static files copied as-is by Vite: `images/`, `404.html`, `.nojekyll`. |
 | `docs/` | **Build output, committed.** Do not hand-edit; rebuild instead. |
@@ -40,7 +42,7 @@ Always run `npm run lint && npm run build` before committing.
 ## Deployment
 
 - Pushing to `main` deploys automatically. Check with `gh run list --limit 3`.
-- `vite.config.js` sets `base: '/personal-site-2027/'` and `outDir: 'docs'` with `emptyOutDir: true`. Anything that must survive a build (`.nojekyll`, `404.html`) has to live in `public/`, never directly in `docs/`.
+- `vite.config.js` sets `base: '/personal-site-2027/'`, `outDir: 'docs'` with `emptyOutDir: true`, and two entry pages (`index.html`, `resume.html`); add any new page to `build.rollupOptions.input`. Anything that must survive a build (`.nojekyll`, `404.html`) has to live in `public/`, never directly in `docs/`.
 - Inside `index.html`, root-relative asset URLs (`/images/...`) get the base prefix from Vite. Plain relative links (e.g. `files/...`) are left as written and work because the page is served from the base path.
 
 ## Conventions
@@ -62,7 +64,9 @@ Always run `npm run lint && npm run build` before committing.
 
 - **Articles titles are guesses.** LinkedIn blocks automated reads, so titles in `articles` (in `src/data.js`) were inferred from URL slugs. Several are probably slightly wrong (e.g. "Same Loop, Different Levels: Human", "Your Career Cards", the "Passion and Purpose in Consulting…" one). Replace with the real titles when Mario provides them; dates and summaries are also missing.
 - **LinkedIn handle unverified.** `https://www.linkedin.com/in/mariotristan/` returns "Profile Not Found" to logged-out requests. The old site used two different LinkedIn URLs. Confirm the real handle with Mario and fix it in `socials`.
-- **No resume on the site.** The 2024 PDF was removed because it contained PII, and the hero's Resume button went with it. When Mario supplies a new, PII-free resume, add it under `public/files/` and restore the button. The old PDF is still in git history and on the old quickstart site.
+- **Resume is an HTML page, not a PDF.** The old 2024 PDF was removed because it contained PII. Keep PII (phone number, home address) out of `data.js` and the repo; the work email is fine. The resume uses `mariotristan@outlook.com`, while the home page contact uses the gmail address, so confirm which one Mario wants.
+- **Old PDF may still exist in git history** (`public/files/` and `docs/files/MarioTristan_2024.pdf`) and in the old `quickstart` repo (`static/docs/`). Purging needs a history rewrite plus force-push, which requires Mario's go-ahead. Check `git log --all -- '*MarioTristan_2024.pdf'` to see whether it's done.
+- **Resume data differences vs the home page.** The resume (Mario's own baseline text) differs from `experience` in `data.js` on a few dates and titles, e.g. FEMSA Systems Coordinator starts May 2011 vs Sep 2007, Accenture DevOps Manager ends July 2021 vs Aug 2021, Chubb is "DevOps Principal Engineer" vs "Principal DevOps Engineer", and Slalom is split into Director (Apr 2025) and Senior Principal Platform Engineer (Mar–Apr 2025). The split of Slalom bullets between the two roles was the assistant's guess. The AWS line in the baseline said "AKS" (an Azure service); it was changed to "EKS" on the assumption of a typo.
 - **GitHub Actions and Applied Skills certs share one URL** in `certifications` (same as the old site).
 - **Recently updated repos** are fetched client-side from the public GitHub API (`/users/mariotristan/repos?sort=pushed`), skipping forks and archived repos, six shown, cached in `sessionStorage` for an hour. Repos with `has_pages` get a "Live site" link (`homepage` if set, otherwise `https://mariotristan.github.io/<repo>/`). Unauthenticated rate limit is 60 requests/hour per IP; on failure the section falls back to a link to GitHub.
 - **Stale docs in the repo:** `README.md` still describes Bootstrap/Vue, and `SETUP_SUMMARY.md` and `GITHUB_PAGES_VERIFICATION.md` are leftovers from the initial Copilot scaffolding. Update or delete them when convenient.
