@@ -157,6 +157,10 @@ export const certifications = [
         name: 'Developer Associate',
         href: 'https://www.credly.com/badges/f5f47bfe-087d-4ed8-8602-02d3df8c6e18',
       },
+      {
+        name: 'Data Lakehouse Demonstrated (microcredential)',
+        href: 'https://www.credly.com/badges/056494bb-56ab-40f3-9a70-9cd40866b5bc',
+      },
     ],
   },
   {
