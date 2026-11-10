@@ -1,9 +1,16 @@
-export default {
+import { defineConfig } from 'vite';
+
+export default defineConfig({
+  root: 'public',
   build: {
-    outDir: 'docs',
+    outDir: '../docs',
     emptyOutDir: true,
     rollupOptions: {
-      input: 'public/index.html',
+      output: {
+        entryFileNames: 'assets/[name]-[hash].js',
+        chunkFileNames: 'assets/[name]-[hash].js',
+        assetFileNames: 'assets/[name]-[hash][extname]',
+      },
     },
   },
   base: '/personal-site-2027/',
@@ -11,4 +18,4 @@ export default {
     port: 3000,
     open: true,
   },
-};
+});
