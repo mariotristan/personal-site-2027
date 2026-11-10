@@ -118,13 +118,14 @@ function renderRepos(repos) {
           ${r.stargazers_count ? `<span>★ ${r.stargazers_count}</span>` : ''}
           <span>pushed ${ago(r.pushed_at)}</span>
         </div>
+        ${r.pages_url ? `<a class="live" href="${esc(r.pages_url)}" ${ext}>Live site ↗</a>` : ''}
       </article>`,
     )
     .join('');
 }
 
 async function loadRepos() {
-  const key = 'gh-repos-v1';
+  const key = 'gh-repos-v2';
   try {
     const cached = JSON.parse(sessionStorage.getItem(key));
     if (cached && Date.now() - cached.at < 36e5) return renderRepos(cached.repos);
@@ -137,13 +138,17 @@ async function loadRepos() {
     const repos = (await res.json())
       .filter((r) => !r.fork && !r.archived)
       .slice(0, REPO_COUNT)
-      .map(({ name, html_url, description, language, stargazers_count, pushed_at }) => ({
-        name,
-        html_url,
-        description,
-        language,
-        stargazers_count,
-        pushed_at,
+      .map((r) => ({
+        name: r.name,
+        html_url: r.html_url,
+        description: r.description,
+        language: r.language,
+        stargazers_count: r.stargazers_count,
+        pushed_at: r.pushed_at,
+        // repos with GitHub Pages enabled get a link to the published site
+        pages_url: r.has_pages
+          ? r.homepage || `https://${GITHUB_USER}.github.io/${r.name === `${GITHUB_USER}.github.io` ? '' : `${r.name}/`}`
+          : '',
       }));
     renderRepos(repos);
     try {

@@ -556,6 +556,14 @@ section {
 .repo h3 a:hover {
   color: var(--ice);
 }
+.repo .live {
+  display: inline-block;
+  margin-top: 12px;
+  position: relative;
+  z-index: 3; /* above the card-wide title link */
+  font-weight: 600;
+  font-size: 14px;
+}
 .repo .meta {
   display: flex;
   flex-wrap: wrap;
