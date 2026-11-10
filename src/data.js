@@ -37,7 +37,7 @@ export const experience = [
     url: 'https://www.slalom.com/',
     period: 'September 2026 – Present',
     summary:
-      'Works closely with clients and teams, leads larger multi-workstream engagements, manages direct reports, participates in Build operations, designs cloud and DevOps architecture, and collaborates on project delivery.',
+      'Fosters a high-performance culture and manages delivery of multiple projects through strategic thinking, influencing and coaching teams. Leads cloud migrations for major clients on multimillion-dollar GCP and AWS accounts, manages direct reports, and grows Slalom\'s business through excellent delivery.',
   },
   {
     role: 'Senior Principal Platform Engineer',
@@ -260,9 +260,11 @@ export const resume = {
       company: 'Slalom',
       period: 'September 2026 – Present',
       bullets: [
-        'Work closely with clients and teams, leading larger multi-workstream engagements and aligning delivery outcomes with client business priorities.',
-        'Manage direct reports and participate in Build operations.',
-        'Design cloud and DevOps architecture and collaborate on project delivery.',
+        'Foster a high-performance culture, facilitate team strategy aligned to business outcomes, and manage the delivery of multiple projects through strategic thinking, influencing, and coaching teams.',
+        'Support operational and financial health of engagements while developing extensive client networks.',
+        "Grow Slalom's business by delivering capabilities and offerings to customers, and support growth through excellent delivery.",
+        'Accountable for the successful delivery of team projects and for cultivating talent within my teams, including managing direct reports and participating in Build operations.',
+        'Work with major clients on cloud migrations for multimillion-dollar GCP and AWS accounts, designing cloud and DevOps architecture and collaborating on project delivery.',
       ],
     },
     {
