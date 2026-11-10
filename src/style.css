@@ -256,7 +256,6 @@ h1 .dot {
   border-radius: var(--r-lg);
   border: 1px solid var(--line);
   box-shadow: var(--lift), 0 0 60px var(--glow-b);
-  image-rendering: pixelated;
 }
 
 .stats {
