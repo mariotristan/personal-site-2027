@@ -14,6 +14,9 @@ export default [
         window: 'readonly',
         document: 'readonly',
         localStorage: 'readonly',
+        sessionStorage: 'readonly',
+        fetch: 'readonly',
+        IntersectionObserver: 'readonly',
       },
     },
     rules: {
