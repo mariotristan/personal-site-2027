@@ -62,6 +62,8 @@ Always run `npm run lint && npm run build` before committing.
 
 ## Known gotchas and open items
 
+The improvement backlog lives in GitHub issues (`gh issue list`); pick one, branch, and open a PR with `Closes #N`. Issues needing Mario's input are labelled `help wanted`.
+
 - **Articles titles are guesses.** LinkedIn blocks automated reads, so titles in `articles` (in `src/data.js`) were inferred from URL slugs. Several are probably slightly wrong (e.g. "Same Loop, Different Levels: Human", "Your Career Cards", the "Passion and Purpose in Consulting…" one). Replace with the real titles when Mario provides them; dates and summaries are also missing.
 - **LinkedIn handle unverified.** `https://www.linkedin.com/in/mariotristan/` returns "Profile Not Found" to logged-out requests. The old site used two different LinkedIn URLs. Confirm the real handle with Mario and fix it in `socials`.
 - **Resume is an HTML page, not a PDF.** The old 2024 PDF was removed because it contained PII. Keep PII (phone number, home address) out of `data.js` and the repo; the work email is fine. The resume uses `mariotristan@outlook.com`, while the home page contact uses the gmail address, so confirm which one Mario wants.
