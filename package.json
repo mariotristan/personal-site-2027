@@ -7,8 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "lint": "eslint src --ext .js,.vue",
-    "lint:fix": "eslint src --ext .js,.vue --fix",
+    "lint": "eslint src",
+    "lint:fix": "eslint src --fix",
     "format": "prettier --write \"src/**/*.{js,css,html,json}\""
   },
   "repository": {
@@ -24,13 +24,9 @@
   "license": "MIT",
   "devDependencies": {
     "@eslint/js": "^9.39.5",
-    "@popperjs/core": "^2.11.8",
-    "@vitejs/plugin-vue": "^5.0.4",
-    "bootstrap": "^5.3.2",
     "eslint": "^9.39.5",
     "prettier": "^3.1.1",
-    "vite": "^5.0.8",
-    "vue": "^3.3.8"
+    "vite": "^5.0.8"
   },
   "bugs": {
     "url": "https://github.com/mariotristan/personal-site-2027/issues"

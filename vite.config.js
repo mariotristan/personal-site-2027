@@ -1,21 +1,13 @@
 import { defineConfig } from 'vite';
 
+// GitHub Pages serves the repo under /personal-site-2027/ and publishes docs/.
 export default defineConfig({
-  root: 'public',
-  build: {
-    outDir: '../docs',
-    emptyOutDir: true,
-    rollupOptions: {
-      output: {
-        entryFileNames: 'assets/[name]-[hash].js',
-        chunkFileNames: 'assets/[name]-[hash].js',
-        assetFileNames: 'assets/[name]-[hash][extname]',
-      },
-    },
-  },
   base: '/personal-site-2027/',
+  build: {
+    outDir: 'docs',
+    emptyOutDir: true,
+  },
   server: {
     port: 3000,
-    open: true,
   },
 });
