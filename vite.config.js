@@ -6,7 +6,7 @@ export default {
       input: 'public/index.html',
     },
   },
-  base: '/',
+  base: '/personal-site-2027/',
   server: {
     port: 3000,
     open: true,
