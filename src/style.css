@@ -498,3 +498,73 @@ body.light .cert-card p {
 body.light .cert-card h3 {
   color: var(--light-text);
 }
+
+/* Contact Section */
+.contact-content {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.contact-methods {
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contact-methods .btn-primary {
+  font-weight: 600;
+  padding: 0.875rem 1.5rem;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.contact-methods .btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(63, 81, 181, 0.3);
+}
+
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--dark-text);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.social-btn:hover {
+  background: var(--secondary-color);
+  color: var(--dark-bg);
+  border-color: var(--secondary-color);
+  transform: scale(1.1) translateY(-4px);
+}
+
+.contact-privacy {
+  text-align: center;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.light .contact-methods {
+  background: rgba(0, 0, 0, 0.02);
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+body.light .social-btn {
+  background: rgba(0, 0, 0, 0.05);
+  color: var(--light-text);
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+body.light .social-btn:hover {
+  background: var(--secondary-color);
+  color: var(--dark-bg);
+}
+
+body.light .contact-privacy {
+  border-top-color: rgba(0, 0, 0, 0.1);
+}
