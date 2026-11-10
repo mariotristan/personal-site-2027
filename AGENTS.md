@@ -33,7 +33,7 @@ Always run `npm run lint && npm run build` before committing.
 | `src/data.js` | **All list content**: profile, socials, technologies, experience, education, certifications, articles. Edit content here. |
 | `src/main.js` | Renders `data.js` into the page, theme toggle, GitHub repos fetch, nav highlighting, scroll-reveal, network canvas. |
 | `src/style.css` | All styling, driven by CSS custom properties; dark default, `[data-theme='light']` override. |
-| `public/` | Static files copied as-is by Vite: `images/`, `files/` (resume PDF), `404.html`, `.nojekyll`. |
+| `public/` | Static files copied as-is by Vite: `images/`, `404.html`, `.nojekyll`. |
 | `docs/` | **Build output, committed.** Do not hand-edit; rebuild instead. |
 | `.github/workflows/deploy.yml` | On push to `main`: `npm ci`, lint, build, upload `docs/`, deploy to Pages. |
 
@@ -41,7 +41,7 @@ Always run `npm run lint && npm run build` before committing.
 
 - Pushing to `main` deploys automatically. Check with `gh run list --limit 3`.
 - `vite.config.js` sets `base: '/personal-site-2027/'` and `outDir: 'docs'` with `emptyOutDir: true`. Anything that must survive a build (`.nojekyll`, `404.html`) has to live in `public/`, never directly in `docs/`.
-- Inside `index.html`, root-relative asset URLs (`/images/...`) get the base prefix from Vite. Plain relative links (`files/MarioTristan_2024.pdf`) are left as written and work because the page is served from the base path.
+- Inside `index.html`, root-relative asset URLs (`/images/...`) get the base prefix from Vite. Plain relative links (e.g. `files/...`) are left as written and work because the page is served from the base path.
 
 ## Conventions
 
@@ -62,7 +62,7 @@ Always run `npm run lint && npm run build` before committing.
 
 - **Articles titles are guesses.** LinkedIn blocks automated reads, so titles in `articles` (in `src/data.js`) were inferred from URL slugs. Several are probably slightly wrong (e.g. "Same Loop, Different Levels: Human", "Your Career Cards", the "Passion and Purpose in Consulting…" one). Replace with the real titles when Mario provides them; dates and summaries are also missing.
 - **LinkedIn handle unverified.** `https://www.linkedin.com/in/mariotristan/` returns "Profile Not Found" to logged-out requests. The old site used two different LinkedIn URLs. Confirm the real handle with Mario and fix it in `socials`.
-- **Resume PDF is stale.** `public/files/MarioTristan_2024.pdf` is the 2024 version copied from the old site; the CV now runs to April 2025 and beyond. Replace when Mario supplies a new one.
+- **No resume on the site.** The 2024 PDF was removed because it contained PII, and the hero's Resume button went with it. When Mario supplies a new, PII-free resume, add it under `public/files/` and restore the button. The old PDF is still in git history and on the old quickstart site.
 - **GitHub Actions and Applied Skills certs share one URL** in `certifications` (same as the old site).
 - **Recently updated repos** are fetched client-side from the public GitHub API (`/users/mariotristan/repos?sort=pushed`), skipping forks and archived repos, six shown, cached in `sessionStorage` for an hour. Repos with `has_pages` get a "Live site" link (`homepage` if set, otherwise `https://mariotristan.github.io/<repo>/`). Unauthenticated rate limit is 60 requests/hour per IP; on failure the section falls back to a link to GitHub.
 - **Stale docs in the repo:** `README.md` still describes Bootstrap/Vue, and `SETUP_SUMMARY.md` and `GITHUB_PAGES_VERIFICATION.md` are leftovers from the initial Copilot scaffolding. Update or delete them when convenient.

@@ -5,7 +5,6 @@ export const profile = {
   tagline: 'I love solving problems, building products, and working with technology.',
   intro:
     "I'm an engineer who works with code and hardware to find the right tool for the job. I help teams understand and improve their applications and business processes through technology. Let's build something great together.",
-  resume: 'files/MarioTristan_2024.pdf',
   email: 'mariotristan@gmail.com',
 };
 
