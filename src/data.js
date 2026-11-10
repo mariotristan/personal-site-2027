@@ -35,9 +35,17 @@ export const experience = [
     role: 'Director, Client Delivery',
     company: 'Slalom',
     url: 'https://www.slalom.com/',
-    period: 'April 2025 – Present',
+    period: 'September 2026 – Present',
     summary:
       'Works closely with clients and teams, leads larger multi-workstream engagements, manages direct reports, participates in Build operations, designs cloud and DevOps architecture, and collaborates on project delivery.',
+  },
+  {
+    role: 'Senior Principal Platform Engineer',
+    company: 'Slalom',
+    url: 'https://www.slalom.com/',
+    period: 'March 2025 – August 2026',
+    summary:
+      'Led cross-capability teams through cloud migrations and modernization across AWS, GCP and Azure, drove Infrastructure as Code (Terraform) and automation (Ansible), and cut onboarding time by 67% with a standardized multi-environment framework.',
   },
   {
     role: 'Principal DevOps Engineer',
@@ -228,7 +236,7 @@ export const articles = [
 ];
 
 // Resume page content. Baseline supplied by Mario; phone number intentionally omitted (PII).
-// The Slalom entries split the original single role into Director (current) and the earlier Senior Principal role.
+// Slalom: Director since September 2026 (promotion); the baseline bullets belong to the earlier Senior Principal role.
 export const resume = {
   name: 'Mario Tristan Martinez',
   title: 'Director, Client Delivery · Slalom',
@@ -250,24 +258,27 @@ export const resume = {
     {
       title: 'Director, Client Delivery',
       company: 'Slalom',
-      period: 'April 2025 – Present',
+      period: 'September 2026 – Present',
       bullets: [
-        "Set strategic direction for multi-workstream engagements, aligning delivery outcomes with client business priorities and Slalom's growth objectives.",
-        'Lead and manage direct reports and cross-capability teams, participating in Build operations and mentoring future leaders on delivery methodologies, ROI storytelling, and career development planning.',
-        'Strengthen executive client relationships, connecting technical decisions to strategic goals and consistently demonstrating measurable business impact.',
-        'Partner with business leaders to shape solution offerings, contribute to pursuit strategies, and ensure seamless transitions from sales to delivery.',
-        'Oversee the operational and financial health of engagements, managing utilization, billable hours, and project financials while maintaining delivery quality and client satisfaction.',
-        'Design cloud and DevOps architecture and champion innovation and emerging technologies (AI, automation agents) to enhance productivity, scalability, and long-term client outcomes.',
+        'Work closely with clients and teams, leading larger multi-workstream engagements and aligning delivery outcomes with client business priorities.',
+        'Manage direct reports and participate in Build operations.',
+        'Design cloud and DevOps architecture and collaborate on project delivery.',
       ],
     },
     {
       title: 'Senior Principal Platform Engineer',
       company: 'Slalom',
-      period: 'March 2025 – April 2025',
+      period: 'March 2025 – August 2026',
       bullets: [
+        "Set strategic direction for multi-workstream engagements, aligning delivery outcomes with client business priorities and Slalom's growth objectives.",
         'Led cross-capability teams through complex migrations and modernization programs across AWS, GCP, and Azure, balancing risk, scope, and prioritization to ensure successful delivery.',
         'Drove adoption of Infrastructure as Code (Terraform) and automation practices (Ansible), embedding delivery excellence standards and coaching engineers to scale velocity and predictability.',
         'Reduced onboarding time by 67% by architecting a standardized multi-environment framework, accelerating delivery across diverse technology stacks and multidisciplinary teams.',
+        'Cultivated talent and a high-performance culture, mentoring future leaders on delivery methodologies, ROI storytelling, and career development planning.',
+        'Strengthened executive client relationships, connecting technical decisions to strategic goals and consistently demonstrating measurable business impact.',
+        'Partnered with business leaders to shape solution offerings, contribute to pursuit strategies, and ensure seamless transitions from sales to delivery.',
+        'Oversaw the operational and financial health of engagements, managing utilization, billable hours, and project financials while maintaining delivery quality and client satisfaction.',
+        'Championed innovation and emerging technologies (AI, automation agents) to enhance productivity, scalability, and long-term client outcomes.',
       ],
     },
     {
