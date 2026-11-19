@@ -147,10 +147,6 @@ export const certifications = [
       { name: 'Azure AI Fundamentals', href: ms('1E6CA6093C776CF3') },
       { name: 'Azure Data Fundamentals', href: ms('167EB12B60F366B') },
       { name: 'Azure Fundamentals', href: ms('BD3F47E6770A318C') },
-      {
-        name: 'Microsoft Pro Badge: GitHub Copilot - Proficient',
-        href: 'https://www.credly.com/badges/c788acce-bb15-4762-a4fb-12a439930c50/public_url',
-      },
     ],
   },
   {
@@ -178,6 +174,10 @@ export const certifications = [
     issuer: 'GitHub',
     items: [
       { name: 'GitHub Copilot', href: ms('13D83629CF1BEF00') },
+      {
+        name: 'Microsoft Pro Badge: GitHub Copilot - Proficient',
+        href: 'https://www.credly.com/badges/c788acce-bb15-4762-a4fb-12a439930c50/public_url',
+      },
       {
         name: 'GitHub Actions',
         href: 'https://learn.microsoft.com/en-us/users/mariotristan/credentials/922cef1e9534a310',
