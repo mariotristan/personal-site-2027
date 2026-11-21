@@ -3,12 +3,21 @@ const $ = (id) => document.getElementById(id);
 const root = document.documentElement;
 const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+export const esc = (s) =>
+  String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
+
+export function brandLogo(name, label = '', format = 'png') {
+  const src = `${import.meta.env.BASE_URL}images/logos/${encodeURIComponent(name)}.${format}`;
+  const title = label ? ` title="${esc(label)}"` : '';
+  return `<img class="brand-logo" src="${esc(src)}" alt="${esc(label)}"${title} width="40" height="40">`;
+}
+
 export function initTheme() {
   function applyTheme(theme) {
     root.dataset.theme = theme;
     $('theme-icon').textContent = theme === 'dark' ? '☀' : '☾';
     $('theme-toggle').setAttribute('aria-label', `Switch to ${theme === 'dark' ? 'light' : 'dark'} theme`);
-    document.querySelector('meta[name="theme-color"]').content = theme === 'dark' ? '#070914' : '#f6f7fd';
+    document.querySelector('meta[name="theme-color"]').content = theme === 'dark' ? '#171d32' : '#f6f7fd';
     try {
       localStorage.setItem('pref-theme', theme);
     } catch {

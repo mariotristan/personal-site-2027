@@ -1,11 +1,12 @@
 /* Styled after tristan-second-brain-public: deep navy, indigo + cyan, pill nav, rounded panels. */
 :root {
-  --bg: #070914;
-  --panel: #0e1330;
-  --panel-2: #14183a;
-  --line: rgba(129, 140, 248, 0.32);
+  --bg: #171d32;
+  --panel: #252e49;
+  --panel-2: #303a58;
+  --line: rgba(165, 180, 252, 0.3);
+  --card-line: rgba(165, 180, 252, 0.2);
   --text: #e2e8f0;
-  --muted: #94a3b8;
+  --muted: #bbc8d8;
   --soft: #cbd5e1;
   --indigo: #818cf8;
   --ice: #a5f3fc;
@@ -13,7 +14,7 @@
   --on-accent: #070914;
   --glow-a: rgba(99, 102, 241, 0.16);
   --glow-b: rgba(34, 211, 238, 0.07);
-  --shadow: 0 8px 28px rgba(0, 0, 0, 0.5);
+  --shadow: 0 8px 28px rgba(0, 0, 0, 0.3);
   --font: 'SF Pro Display', 'Inter', 'Segoe UI', Helvetica, Arial, sans-serif;
   --mono: ui-monospace, 'SF Mono', 'JetBrains Mono', Menlo, Consolas, monospace;
   color-scheme: dark;
@@ -24,6 +25,7 @@
   --panel: #ffffff;
   --panel-2: #eceffb;
   --line: rgba(63, 81, 216, 0.28);
+  --card-line: var(--line);
   --text: #0f172a;
   --muted: #5b6478;
   --soft: #334155;
@@ -399,6 +401,7 @@ section {
 }
 .card {
   padding: 26px;
+  border-color: var(--card-line);
   border-radius: 28px;
   position: relative;
   overflow: hidden;
@@ -462,6 +465,30 @@ section {
 }
 
 /* Experience rows */
+.brand-logo {
+  display: block;
+  flex: 0 0 40px;
+  width: 40px;
+  height: 40px;
+  padding: 4px;
+  border-radius: 10px;
+  background: #f0f3f8;
+  object-fit: contain;
+  object-position: center;
+}
+:root:not([data-theme='light']) .brand-logo {
+  filter: brightness(0.94);
+}
+.brand-heading,
+.experience-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+.experience-content {
+  align-items: center;
+}
 .rows {
   display: grid;
   gap: 10px;
@@ -495,6 +522,7 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 12px;
 }
 .certs .count {
   font-family: var(--mono);
@@ -669,9 +697,40 @@ section {
 .resume-hero h1 {
   font-size: clamp(34px, 7vw, 64px);
 }
+.summary-panel {
+  background: var(--panel-2);
+}
+.summary-label {
+  margin-bottom: 12px;
+  color: var(--ice);
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.summary-panel .lead {
+  max-width: 75ch;
+}
 .subh {
   margin: 36px 0 14px;
   font-size: 20px;
+}
+.highlights {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+.highlights .card {
+  padding: 20px;
+}
+.highlights h4 {
+  margin: 0 0 6px;
+  font-size: 16px;
+}
+@media (max-width: 600px) {
+  .highlights {
+    grid-template-columns: 1fr;
+  }
 }
 .bullets {
   display: grid;
@@ -705,6 +764,21 @@ section {
 .role h3 {
   font-size: 19px;
 }
+.role .role-intro {
+  margin-top: 10px;
+}
+.expertise-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 12px;
+}
+.expertise-logos .brand-logo {
+  flex-basis: 34px;
+  width: 34px;
+  height: 34px;
+}
 .resume-page .dots a {
   color: var(--ice);
 }
@@ -717,6 +791,7 @@ section {
     --panel: #fff;
     --panel-2: #fff;
     --line: #c7cbe0;
+    --card-line: var(--line);
     --text: #111;
     --muted: #333;
     --soft: #222;
@@ -739,6 +814,9 @@ section {
   section {
     padding: 18px 0;
   }
+  .highlights {
+    grid-template-columns: repeat(2, 1fr);
+  }
   .card,
   .panel {
     break-inside: avoid;
@@ -747,6 +825,9 @@ section {
   }
   .card::after {
     display: none;
+  }
+  :root:not([data-theme='light']) .brand-logo {
+    filter: none;
   }
   a {
     color: inherit;
