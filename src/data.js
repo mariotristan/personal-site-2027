@@ -34,22 +34,25 @@ export const experience = [
   {
     role: 'Director, Client Delivery',
     company: 'Slalom',
+    logo: 'slalom',
     url: 'https://www.slalom.com/',
     period: 'September 2026 – Present',
     summary:
       'Fosters a high-performance culture and manages delivery of multiple projects through strategic thinking, influencing and coaching teams. Leads cloud migrations for major clients on multimillion-dollar GCP and AWS accounts, manages direct reports, and grows Slalom\'s business through excellent delivery.',
   },
   {
-    role: 'Senior Principal Platform Engineer',
+    role: 'Senior Principal, Client Delivery',
     company: 'Slalom',
+    logo: 'slalom',
     url: 'https://www.slalom.com/',
-    period: 'March 2025 – August 2026',
+    period: 'April 2025 – Present',
     summary:
       'Led cross-capability teams through cloud migrations and modernization across AWS, GCP and Azure, drove Infrastructure as Code (Terraform) and automation (Ansible), and cut onboarding time by 67% with a standardized multi-environment framework.',
   },
   {
-    role: 'Principal DevOps Engineer',
+    role: 'Principal Engineer',
     company: 'Chubb',
+    logo: 'chubb',
     url: 'https://www.chubb.com/mx-es/',
     period: 'Jan 2024 – March 2025',
     summary:
@@ -57,15 +60,17 @@ export const experience = [
   },
   {
     role: 'DevSecOps Manager',
-    company: 'PwC',
+    company: 'PwC México',
+    logo: 'pwc',
     url: 'https://www.pwc.com/mx/es.html',
     period: 'Sep 2023 – Jan 2024',
     summary:
       'Worked with engineering teams to improve operational efficiency and maintain Development, QA and Production environments.',
   },
   {
-    role: 'Lead DevSecOps Engineer, Digital',
+    role: 'DevSecOps Engineer, Loyalty Program (Spin Premia)',
     company: 'FEMSA',
+    logo: 'femsa',
     url: 'https://www.femsa.com/es/unidades-de-negocio/digital-femsa/',
     period: 'Jan 2022 – Aug 2023',
     summary:
@@ -75,22 +80,32 @@ export const experience = [
   {
     role: 'Principal DevOps Engineer',
     company: 'Solera',
+    logo: 'solera',
     url: 'https://www.solera.com/',
     period: 'Aug 2021 – Jan 2022',
     summary:
       'Engineering execution excellence and technical direction for the source code management team.',
   },
   {
-    role: 'DevOps Manager',
+    role: 'Manager (DevOps Location Supervisor for Monterrey Delivery Center)',
     company: 'Accenture',
+    logo: 'accenture',
     url: 'https://www.accenture.com/',
-    period: 'Aug 2019 – Aug 2021',
+    period: 'Mar 2021 – Aug 2021',
     summary:
-      'Used open source, enterprise and public cloud technology and the Accenture DevOps Platform to deliver CI/CD solutions.',
+      'Across the 2019–2021 Accenture roles, used open source, enterprise and public cloud technology and the Accenture DevOps Platform to deliver CI/CD solutions.',
+  },
+  {
+    role: 'Associate Manager',
+    company: 'Accenture',
+    logo: 'accenture',
+    url: 'https://www.accenture.com/',
+    period: 'Sep 2019 – Mar 2021',
   },
   {
     role: 'Information Technology & Records Manager',
-    company: 'FIBRA Macquarie Group',
+    company: 'Macquarie Group',
+    logo: 'fibra',
     url: 'https://www.fibramacquarie.com/es.html',
     period: 'Jan 2018 – Jul 2019',
     summary: 'Developed and implemented IT policy and best-practice guides.',
@@ -98,18 +113,47 @@ export const experience = [
   {
     role: 'Software Engineer Team Lead / Technical Project Manager',
     company: 'Accenture',
+    logo: 'accenture',
     url: 'https://www.accenture.com/',
-    period: 'Jul 2014 – Dec 2017',
+    period: 'Jul 2014 – Jan 2018',
     summary:
       'Analysis, design, build, test and support of system components and applications.',
   },
   {
-    role: 'Systems Coordinator',
+    role: 'HR Systems Coordinator',
     company: 'FEMSA',
+    logo: 'femsa',
     url: 'https://www.femsa.com/',
-    period: 'Sep 2007 – Jul 2014',
+    period: 'May 2011 – Jul 2014',
     summary:
       'Architecture design of satellite systems, researching technologies and frameworks, and understanding the business domain.',
+  },
+  {
+    role: 'Senior Developer - Contractor',
+    company: 'FEMSA',
+    logo: 'femsa',
+    url: 'https://www.femsa.com/',
+    period: 'Sep 2007 – May 2011',
+    summary:
+      'Developed satellite systems for the global HR department, integrating applications with SAP using Microsoft technologies.',
+  },
+  {
+    role: 'Developer',
+    company: 'Ermilo E. Richer A.A.',
+    logo: 'ericher',
+    url: 'https://ericher.com/',
+    period: 'May 2006 – Sep 2007',
+    summary:
+      'Developed the first web reports using Microsoft technologies, provided business analysis and technical support in the Laredo office, and maintained networks across both offices.',
+  },
+  {
+    role: 'Developer',
+    company: 'Central de Importaciones de Nuevo Laredo (CONATRAM)',
+    logo: 'conatram',
+    url: 'https://conatram.mx/',
+    period: 'Nov 2005 – May 2006',
+    summary:
+      'Maintained VB 6 and SQL 2000 applications, developed a customs declaration system with ASP.NET and Crystal Reports, and supported carrier users.',
   },
 ];
 
@@ -134,6 +178,7 @@ const ms = (id) =>
 export const certifications = [
   {
     issuer: 'Microsoft',
+    logo: 'microsoft',
     items: [
       { name: 'DevOps Engineer Expert', href: ms('A5E118B2C41FD067') },
       { name: 'Azure Administrator Associate', href: ms('18CAD79BFA8C2AC4') },
@@ -151,6 +196,7 @@ export const certifications = [
   },
   {
     issuer: 'AWS',
+    logo: 'aws',
     items: [
       {
         name: 'Cloud Practitioner',
@@ -172,6 +218,7 @@ export const certifications = [
   },
   {
     issuer: 'GitHub',
+    logo: 'github',
     items: [
       { name: 'GitHub Copilot', href: ms('13D83629CF1BEF00') },
       {
@@ -189,7 +236,8 @@ export const certifications = [
     ],
   },
   {
-    issuer: 'OpenAI & Scrum',
+    issuer: 'OpenAI',
+    logo: 'openai',
     items: [
       {
         name: 'OpenAI Partner Network: ChatGPT Deployment Practitioner',
@@ -199,6 +247,12 @@ export const certifications = [
         name: 'OpenAI Partner Network: API Deployment Practitioner',
         href: 'https://oaipartnernetwork.credential.net/c0919c39-b44c-4d83-b8e7-6148ff1ca2f7#acc.Ejt7nRkz',
       },
+    ],
+  },
+  {
+    issuer: 'Scrum',
+    logo: 'scrum',
+    items: [
       {
         name: 'Scrum Foundation Professional Certification (SFPC)',
         href: 'https://www.credly.com/badges/9a3e130e-4b73-4872-a2da-ee7034f0a013/public_url',
@@ -244,164 +298,201 @@ export const articles = [
 ];
 
 // Resume page content. Baseline supplied by Mario; phone number intentionally omitted (PII).
-// Slalom: Director since September 2026 (promotion); the baseline bullets belong to the earlier Senior Principal role.
+// Employment titles and dates follow the LinkedIn profile export supplied by Mario.
 export const resume = {
   name: 'Mario Tristan Martinez',
   title: 'Director, Client Delivery · Slalom',
   email: 'mariotristan@outlook.com',
   linkedin: 'https://www.linkedin.com/in/mariotristan/',
   summary:
-    'Seasoned technology leader with over 20 years of experience driving digital transformation and solving complex business challenges across Insurance, Financial Services, Fintech, and SaaS. Expert in multi-cloud strategy (AWS, Azure, GCP) and modern platforms such as Kubernetes, with a proven track record of architecting scalable solutions, leading high-performing teams, and embedding DevOps and automation practices at enterprise scale. Recognized for fostering innovation, cultivating talent, and aligning technical vision with business outcomes to deliver measurable impact and sustainable growth.',
+    'Technology and delivery leader guiding cloud modernization and DevOps transformation across AWS, Azure, and Google Cloud. At Slalom, I lead client delivery and teams, support engagement financial health, and help deliver cloud migrations for multimillion-dollar accounts.',
   highlights: [
-    'Drive enterprise cloud transformation, leading adoption and large-scale migrations across AWS, Azure, and GCP to align technology with business growth objectives.',
-    'Set infrastructure strategy by defining and implementing Infrastructure as Code (declarative and imperative), ensuring scalability, resilience, and operational efficiency.',
-    'Architect CI/CD frameworks for distributed, mission-critical products, enabling faster release cycles and improved delivery predictability.',
-    'Champion DevSecOps enablement, embedding regulatory compliance and security best practices into delivery pipelines to safeguard enterprise systems.',
-    'Lead application modernization through containerization and orchestration, accelerating innovation and reducing operational overhead.',
-    'Elevate quality engineering practices, enabling both new and legacy projects to meet enterprise standards for reliability and performance.',
-    'Oversee program management of complex, multi-workstream initiatives, balancing resources, timelines, and risk to ensure successful delivery.',
-    'Mentor and develop engineering leaders, fostering a culture of continuous improvement, innovation, and accountability across teams.',
+    {
+      title: 'Cloud strategy',
+      summary: 'Lead cloud adoption and migrations across AWS, Azure, and GCP, aligning technology with business goals.',
+    },
+    {
+      title: 'Delivery & automation',
+      summary: 'Build infrastructure and CI/CD automation that improves delivery; a standardized multi-environment framework reduced onboarding time by 67%.',
+    },
+    {
+      title: 'Leadership',
+      summary: 'Lead teams and client engagements, develop leaders and relationships, and support financial health while managing delivery risk.',
+    },
+    {
+      title: 'Governance',
+      summary: 'Embed security, compliance, and quality practices into delivery pipelines and enterprise systems.',
+    },
   ],
   roles: [
     {
       title: 'Director, Client Delivery',
       company: 'Slalom',
+      logo: 'slalom',
       period: 'September 2026 – Present',
+      intro: 'I lead client delivery and coach teams, connecting project outcomes with client and business goals.',
       bullets: [
-        'Foster a high-performance culture, facilitate team strategy aligned to business outcomes, and manage the delivery of multiple projects through strategic thinking, influencing, and coaching teams.',
-        'Support operational and financial health of engagements while developing extensive client networks.',
-        "Grow Slalom's business by delivering capabilities and offerings to customers, and support growth through excellent delivery.",
-        'Accountable for the successful delivery of team projects and for cultivating talent within my teams, including managing direct reports and participating in Build operations.',
-        'Work with major clients on cloud migrations for multimillion-dollar GCP and AWS accounts, designing cloud and DevOps architecture and collaborating on project delivery.',
+        'Help deliver cloud migrations for multimillion-dollar AWS and Google Cloud accounts.',
+        'Support engagement financial health and build client relationships.',
+        'Manage direct reports and develop talent across delivery teams.',
       ],
     },
     {
-      title: 'Senior Principal Platform Engineer',
+      title: 'Senior Principal, Client Delivery',
       company: 'Slalom',
-      period: 'March 2025 – August 2026',
+      logo: 'slalom',
+      period: 'April 2025 – Present',
+      intro: 'I work with clients and cross-capability teams on cloud modernization and complex, multi-workstream engagements.',
       bullets: [
-        "Set strategic direction for multi-workstream engagements, aligning delivery outcomes with client business priorities and Slalom's growth objectives.",
-        'Led cross-capability teams through complex migrations and modernization programs across AWS, GCP, and Azure, balancing risk, scope, and prioritization to ensure successful delivery.',
-        'Drove adoption of Infrastructure as Code (Terraform) and automation practices (Ansible), embedding delivery excellence standards and coaching engineers to scale velocity and predictability.',
-        'Reduced onboarding time by 67% by architecting a standardized multi-environment framework, accelerating delivery across diverse technology stacks and multidisciplinary teams.',
-        'Cultivated talent and a high-performance culture, mentoring future leaders on delivery methodologies, ROI storytelling, and career development planning.',
-        'Strengthened executive client relationships, connecting technical decisions to strategic goals and consistently demonstrating measurable business impact.',
-        'Partnered with business leaders to shape solution offerings, contribute to pursuit strategies, and ensure seamless transitions from sales to delivery.',
-        'Oversaw the operational and financial health of engagements, managing utilization, billable hours, and project financials while maintaining delivery quality and client satisfaction.',
-        'Championed innovation and emerging technologies (AI, automation agents) to enhance productivity, scalability, and long-term client outcomes.',
+        'Reduced onboarding time by 67% with a standardized multi-environment framework.',
+        'Led migrations across AWS, Google Cloud, and Azure and promoted Terraform and Ansible practices.',
+        'Mentored leaders, strengthened executive relationships, and supported engagement financial health.',
       ],
     },
     {
-      title: 'DevOps Principal Engineer',
-      company: 'Chubb Seguros',
+      title: 'Principal Engineer',
+      company: 'Chubb',
+      logo: 'chubb',
       period: 'January 2024 – March 2025',
+      intro: 'I managed and mentored DevOps engineers while working with engineering leaders to improve operations.',
       bullets: [
-        'Provided strategic leadership by directly managing and mentoring a high-performing team of DevOps Engineers, fostering a culture of innovation, accountability, and delivery excellence.',
-        'Shaped operational strategy in partnership with Engineering leadership, driving efficiency across Development, QA, and Production environments to ensure scalability and resilience.',
-        'Defined and implemented infrastructure and process improvements, aligning technical decisions with business priorities and long-term growth objectives.',
-        'Influenced organizational culture by partnering with Principal Engineers to embed DevOps practices across the enterprise, accelerating adoption and maturity.',
-        'Oversaw resource planning and risk management, ensuring accurate estimation of timelines, budgets, and dependencies for complex release cycles.',
-        'Established release governance, guaranteeing readiness of code, documentation, and configuration assets while reducing technical debt through structured code review programs.',
-        'Enabled enterprise cloud adoption by training new teams on cloud strategy, best practices, and standardized frameworks, driving faster onboarding and consistent delivery outcomes.',
+        'Improved infrastructure and processes across development, QA, and production.',
+        'Led resource planning, risk management, and release governance.',
+        'Trained teams on cloud strategy and DevOps practices.',
       ],
     },
     {
       title: 'DevSecOps Manager',
-      company: 'PwC',
+      company: 'PwC México',
+      logo: 'pwc',
       period: 'September 2023 – January 2024',
+      intro: 'I led a DevOps team and partnered with engineering leaders to strengthen delivery and production operations.',
       bullets: [
-        'Provided strategic leadership by managing and mentoring a team of DevOps Engineers, fostering a culture of innovation, accountability, and delivery excellence.',
-        'Shaped operational strategy in partnership with Engineering leadership, driving efficiency across Development, QA, and Production environments to ensure scalability and resilience.',
-        'Established sustainable production practices, overseeing triage and resolution of critical issues while embedding long-term reliability into systems and processes.',
-        'Drove automation and knowledge management, ensuring repeatable, documented workflows that increase efficiency and reduce operational overhead.',
-        'Defined and implemented infrastructure and process improvements, aligning technical decisions with business priorities and long-term growth objectives.',
-        'Influenced stakeholders across departments, communicating complex technical strategies in business terms to secure alignment and executive buy-in.',
-        'Oversaw release governance, managing resource planning, risk assessment, and readiness of code, documentation, and configuration assets for enterprise-scale deployments.',
-        'Enabled enterprise cloud adoption, training new teams on cloud strategy, best practices, and standardized frameworks to accelerate onboarding and delivery outcomes.',
+        'Improved production reliability through incident triage and sustainable practices.',
+        'Introduced automation and documented workflows to improve repeatability.',
+        'Oversaw release readiness and trained teams on cloud practices.',
       ],
     },
     {
-      title: 'Lead DevOps Engineer',
-      company: 'Digital@FEMSA',
+      title: 'DevSecOps Engineer, Loyalty Program (Spin Premia)',
+      company: 'FEMSA',
+      logo: 'femsa',
       period: 'January 2022 – August 2023',
+      intro: 'I worked with operations leaders to improve deployment and delivery for Digital@FEMSA products.',
       bullets: [
-        'Collaborated with operations leadership to design and implement enterprise-wide deployment automation solutions, enabling faster, more reliable delivery across Digital@FEMSA products and initiatives.',
-        'Architected modern technical frameworks with advanced automation to support complex, large-scale digital and enterprise applications, ensuring scalability and resilience.',
-        'Instituted sustainable incident management practices, engaging developers as accountable owners of their code and leading cross-functional response efforts to minimize downtime and strengthen reliability.',
-        'Established governance for change management, ensuring all code and configuration updates were automated, traceable, and repeatable to reduce risk and improve compliance.',
-        'Leveraged open source, enterprise, and public cloud technologies to deliver best-in-class CI/CD solutions, accelerating innovation and enabling teams to release with confidence.',
-        'Championed DevOps culture adoption, embedding practices that improved collaboration, accountability, and delivery velocity across engineering and product teams.',
+        'Designed deployment automation and CI/CD solutions for enterprise applications.',
+        'Established repeatable, traceable change-management practices.',
+        'Led cross-functional incident response and promoted shared ownership.',
       ],
     },
     {
       title: 'Principal DevOps Engineer',
       company: 'Solera',
+      logo: 'solera',
       period: 'August 2021 – January 2022',
+      intro: 'I provided technical direction and developed the engineering team supporting source code management.',
       bullets: [
-        "Partnered with operations leadership to design and implement enterprise-wide deployment automation solutions, accelerating delivery and improving reliability across Solera's product portfolio.",
-        'Built and scaled a high-performing engineering function, hiring, mentoring, and managing DevOps talent to enhance productivity, innovation, and team well-being.',
-        'Transformed operational processes within enterprise-class systems, aligning workflows with business priorities and driving measurable efficiency gains.',
-        "Provided executive-level technical vision, ensuring the Source Code Management (SCM) team's roadmap and execution strategy aligned with company objectives and long-term growth.",
-        'Oversaw program governance, managing scope, resource estimation, and risk across complex release cycles to ensure predictable delivery outcomes.',
-        'Led incident management strategy, participating in global on-call rotations while embedding sustainable practices to minimize downtime and strengthen system resilience.',
-        'Delivered executive and C-level presentations, securing stakeholder buy-in and clearly communicating strategic goals, technical direction, and business impact.',
+        'Partnered with operations leaders on deployment automation.',
+        'Hired, mentored, and managed DevOps engineers.',
+        'Led incident management and communicated technical strategy to executives.',
       ],
     },
     {
-      title: 'DevOps Manager',
+      title: 'Manager (DevOps Location Supervisor for Monterrey Delivery Center)',
       company: 'Accenture',
-      period: 'August 2019 – July 2021',
+      logo: 'accenture',
+      period: 'March 2021 – August 2021',
+      intro: 'Across this role and my Associate Manager role, I supported enterprise DevOps transformation and delivery automation.',
       bullets: [
-        'Architected next-generation technical frameworks with advanced automation to support complex delivery across diverse digital and enterprise applications, ensuring scalability and resilience.',
-        'Forged strategic partnerships with industry leaders (Microsoft, Amazon, Atlassian, Docker, CHEF), securing access to cutting-edge tools, solutions, and training to accelerate innovation.',
-        'Led enterprise DevOps transformation, harnessing open source, enterprise, and public cloud technologies to deliver best-in-class CI/CD solutions via the Accenture DevOps Platform, enabling clients to innovate faster and more effectively.',
-        'Established governance for change management, ensuring all code and configuration updates were automated, traceable, and repeatable to reduce risk and improve compliance.',
-        'Directed Infrastructure as Code strategy, embedding provisioning and configuration practices with rigorous quality controls (versioning, reviews, testing) to align infrastructure with enterprise standards.',
-        'Instituted sustainable incident management practices, engaging developers as accountable owners of their code and leading cross-functional response efforts to minimize downtime and strengthen reliability.',
+        'Delivered CI/CD solutions using the Accenture DevOps Platform.',
+        'Directed infrastructure-as-code and change-management practices.',
+        'Built technology partnerships and supported incident management.',
       ],
+    },
+    {
+      title: 'Associate Manager',
+      company: 'Accenture',
+      logo: 'accenture',
+      period: 'September 2019 – March 2021',
+      intro: 'I worked on the shared Accenture DevOps initiatives described in the Manager role above.',
+      bullets: [],
     },
     {
       title: 'Information Technology & Records Manager',
-      company: 'MMREIT Property Administration, a member of FIBRA Macquarie Group',
+      company: 'Macquarie Group',
+      logo: 'fibra',
       period: 'January 2018 – July 2019',
+      intro: 'I led IT operations and governance, working across departments to improve enterprise processes.',
       bullets: [
-        'Chaired cross-functional committees to design and implement new enterprise processes across HR, Property Management, Office Administration, and Invoicing, driving operational efficiency and business alignment.',
-        'Championed change management and Agile methodologies, embedding modern delivery practices to accelerate adoption and improve organizational resilience.',
-        'Directed enterprise IT governance, overseeing network and data security, system audits, and compliance reporting to safeguard critical assets and ensure regulatory alignment.',
-        'Defined IT strategy and policy, developing best-practice frameworks and operational guides to standardize processes and elevate organizational maturity.',
-        'Designed and delivered enterprise training programs, equipping staff with modern tools, practices, and knowledge to improve productivity and adoption of new systems.',
-        'Oversaw major IT initiatives, setting timeframes and managing execution for system updates, upgrades, migrations, and planned outages to minimize disruption and maximize business continuity.',
-        'Managed IT financials, reporting on budget allocation and ensuring investments aligned with strategic priorities and ROI expectations.',
-        'Provided vision and direction for IT teams, mentoring staff, identifying skill gaps, and creating opportunities for professional growth and advancement.',
+        'Oversaw security, system audits, compliance reporting, and IT policy.',
+        'Managed system updates, migrations, outages, and IT budgets.',
+        'Led cross-functional process improvements and staff training.',
       ],
     },
     {
       title: 'Software Engineer Team Lead / Technical Project Manager',
-      company: 'Accenture (Monterrey, Mexico and Hartford, Connecticut)',
-      period: 'July 2014 – December 2017',
+      company: 'Accenture',
+      logo: 'accenture',
+      period: 'July 2014 – January 2018',
+      intro: 'I led project teams and worked with clients on migrations and application development.',
       bullets: [
-        'Handled several migration projects in parallel as the point of contact for the project team, business partners, and management: provided updates, resolved issues, set the delivery way of working, managed customer migration plans with the business, and rolled out migrations to get customers live on the new platform.',
-        'Led project teams through the project life cycle, including approvals and the change management process.',
-        'Brainstormed with clients to design next-generation IT architectures, including serverless and microservices implementations, and built proofs of concept for new or emerging technologies at client sites.',
-        'Delivered solutions with an agile delivery method, using DevOps to bring them to life quickly for clients.',
-        'Analyzed, designed, built, tested, implemented, and supported multiple system components and applications, gathering and interpreting user and system requirements into design specifications and developing system specifications and interfaces.',
+        'Coordinated parallel customer migrations from planning through rollout.',
+        'Designed serverless and microservices architectures and built proofs of concept.',
+        'Designed, coded, tested, and supported application components.',
       ],
     },
     {
-      title: 'Systems Coordinator',
-      company: 'FEMSA (Monterrey, Mexico)',
+      title: 'HR Systems Coordinator',
+      company: 'FEMSA',
+      logo: 'femsa',
       period: 'May 2011 – July 2014',
+      intro: 'I coordinated the development and support of HR applications and satellite systems.',
       bullets: [
-        'Contributed to decision making and provided a common language and concepts for communication between the teams in a project; took part in implementing new functionality and integrating new units according to the approved design, and coordinated support, development, and maintenance of the assigned applications.',
-        'Designed the architecture of satellite systems, researching innovative technologies, architectural frameworks, and best practices, and understanding the business domain.',
-        'Acted as liaison between internal clients and consultants, coordinating human resources in the projects implementing new and existing systems under my responsibility.',
-        'Optimized hardware resource usage of applications to enable better use of computing resources, checking compliance with service level agreements for user support requests.',
+        'Designed satellite-system architecture and researched technologies and best practices.',
+        'Coordinated internal clients and consultants on system implementations.',
+        'Improved hardware resource use and monitored support service levels.',
+      ],
+    },
+    {
+      title: 'Senior Developer - Contractor',
+      company: 'FEMSA',
+      logo: 'femsa',
+      period: 'September 2007 – May 2011',
+      intro: 'I developed satellite systems for the global HR department using Microsoft technologies.',
+      bullets: [
+        'Integrated applications with SAP to support HR systems and workflows.',
+      ],
+    },
+    {
+      title: 'Developer',
+      company: 'Ermilo E. Richer A.A.',
+      logo: 'ericher',
+      period: 'May 2006 – September 2007',
+      intro: 'I combined development, business analysis, and technical support in the Laredo office.',
+      bullets: [
+        'Developed the first web reports using Microsoft technologies.',
+        'Maintained networks across both offices.',
+      ],
+    },
+    {
+      title: 'Developer',
+      company: 'Central de Importaciones de Nuevo Laredo (CONATRAM)',
+      logo: 'conatram',
+      period: 'November 2005 – May 2006',
+      intro: 'I developed and supported applications for customs operations and carrier users.',
+      bullets: [
+        'Maintained existing VB 6 and SQL 2000 applications.',
+        'Developed a customs declaration capture and printing system using ASP.NET and Crystal Reports.',
+        'Provided technical support to carrier users.',
       ],
     },
   ],
   expertise: [
     {
       area: 'Cloud platforms',
+      logos: [
+        ['Azure', 'microsoftazure'], ['AWS', 'amazonwebservices'], ['Google Cloud', 'googlecloud'],
+      ],
       lines: [
         'Azure (7 years): Networking, Functions, App Services, Blob Storage, API Management, Active Directory, Cosmos DB, Power Platform.',
         'AWS (6 years): Networking, Monitoring (CloudWatch and CloudTrail), EC2, ECS, EKS, Secrets Manager, S3, RDS.',
@@ -410,6 +501,11 @@ export const resume = {
     },
     {
       area: 'CI/CD & DevOps enablement (7 years)',
+      logos: [
+        ['Jenkins', 'jenkins'], ['GitHub Actions', 'githubactions'], ['TeamCity', 'teamcity'],
+        ['Octopus Deploy', 'octopusdeploy'], ['GitLab', 'gitlab'], ['Azure DevOps', 'azuredevops'],
+        ['AWS CodePipeline', 'amazonwebservices'],
+      ],
       lines: [
         'Jenkins, GitHub Actions, TeamCity, Octopus, GitLab, Azure DevOps, AWS CodePipeline.',
         'Directed enterprise-scale CI/CD adoption, embedding automation, compliance, and delivery excellence across distributed teams.',
@@ -417,6 +513,10 @@ export const resume = {
     },
     {
       area: 'Automation & Infrastructure as Code (7 years)',
+      logos: [
+        ['Terraform', 'terraform'], ['Ansible', 'ansible'], ['Chef', 'chef'], ['Pulumi', 'pulumi'],
+        ['Bash', 'gnubash'], ['PowerShell', 'powershell'],
+      ],
       lines: [
         'Terraform, Ansible, Chef, Pulumi, Bash, PowerShell.',
         'Championed IaC adoption, embedding governance, versioning, and testing practices to align infrastructure with enterprise standards.',
@@ -424,6 +524,7 @@ export const resume = {
     },
     {
       area: 'Containers & orchestration (7 years)',
+      logos: [['Docker', 'docker'], ['Kubernetes', 'kubernetes']],
       lines: [
         'Docker, Kubernetes.',
         'Drove containerization and orchestration strategies to modernize legacy applications and accelerate innovation.',
@@ -431,6 +532,7 @@ export const resume = {
     },
     {
       area: 'Programming & scripting (15 years)',
+      logos: [['C#', 'csharp'], ['Python', 'python'], ['Ruby', 'ruby'], ['Node.js', 'nodedotjs']],
       lines: [
         'C#, Python, Ruby, Node.js.',
         'Applied across automation, cloud-native development, and enterprise integrations.',
@@ -438,6 +540,9 @@ export const resume = {
     },
     {
       area: 'Databases (15 years)',
+      logos: [
+        ['SQL Server', 'microsoftsqlserver'], ['Oracle', 'oracle'], ['MySQL', 'mysql'], ['MongoDB', 'mongodb'],
+      ],
       lines: [
         'SQL Server, Oracle, MySQL, MongoDB.',
         'Designed resilient data architectures and modernization strategies for mission-critical applications.',
@@ -445,6 +550,9 @@ export const resume = {
     },
     {
       area: 'Systems & enterprise platforms',
+      logos: [
+        ['Windows', 'windows'], ['Linux', 'linux'], ['Salesforce', 'salesforce'], ['SAP SuccessFactors', 'sap'],
+      ],
       lines: [
         'Windows (8 years), Linux (5 years).',
         'Salesforce (2 years): development and administration.',

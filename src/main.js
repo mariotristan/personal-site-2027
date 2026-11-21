@@ -1,20 +1,19 @@
 import './style.css';
-import { initCardGlow, initNetwork, initReveal, initTheme } from './common.js';
+import { brandLogo, esc, initCardGlow, initNetwork, initReveal, initTheme } from './common.js';
 import { articles, certifications, education, experience, socials, technologies } from './data.js';
 
 const GITHUB_USER = 'mariotristan';
 const REPO_COUNT = 6;
 
 const $ = (id) => document.getElementById(id);
-const esc = (s) =>
-  String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
 const ext = 'target="_blank" rel="noopener noreferrer"';
 
 initTheme();
 
 // Stats
 const certCount = certifications.reduce((n, g) => n + g.items.length, 0);
-const years = new Date().getFullYear() - 2007;
+const today = new Date();
+const years = today.getFullYear() - 2005 - (today.getMonth() < 10 ? 1 : 0);
 $('stats').innerHTML = [
   [`${years}+`, 'years in tech'],
   [experience.length, 'roles'],
@@ -32,10 +31,13 @@ $('timeline').innerHTML = experience
   .map(
     (e) => `<article class="row">
       <span class="tag">${esc(e.period)}</span>
-      <div>
-        <h3>${esc(e.role)} · <a href="${esc(e.url)}" ${ext}>${esc(e.company)}</a></h3>
-        <p>${esc(e.summary)}</p>
-        ${e.link ? `<a class="more" href="${esc(e.link.href)}" ${ext}>${esc(e.link.label)} ↗</a>` : ''}
+      <div class="experience-content">
+        ${brandLogo(e.logo)}
+        <div>
+          <h3>${esc(e.role)} · <a href="${esc(e.url)}" ${ext}>${esc(e.company)}</a></h3>
+          ${e.summary ? `<p>${esc(e.summary)}</p>` : ''}
+          ${e.link ? `<a class="more" href="${esc(e.link.href)}" ${ext}>${esc(e.link.label)} ↗</a>` : ''}
+        </div>
       </div>
     </article>`,
   )
@@ -56,7 +58,7 @@ $('education-list').innerHTML = education
 $('certs').innerHTML = certifications
   .map(
     (g) => `<article class="card">
-      <h3>${esc(g.issuer)} <span class="count">${g.items.length}</span></h3>
+      <h3><span class="brand-heading">${brandLogo(g.logo)} ${esc(g.issuer)}</span> <span class="count">${g.items.length}</span></h3>
       <ul class="cert-list">
         ${g.items
           .map((c) => `<li><a href="${esc(c.href)}" ${ext}>${esc(c.name)}<span aria-hidden="true">↗</span></a></li>`)
