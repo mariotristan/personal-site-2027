@@ -192,6 +192,10 @@ export const certifications = [
     issuer: 'OpenAI & Scrum',
     items: [
       {
+        name: 'OpenAI Partner Network: ChatGPT Deployment Practitioner',
+        href: 'https://oaipartnernetwork.credential.net/018f7727-0b34-4057-9ab4-37b6ac5dab3b',
+      },
+      {
         name: 'OpenAI Partner Network: API Deployment Practitioner',
         href: 'https://oaipartnernetwork.credential.net/c0919c39-b44c-4d83-b8e7-6148ff1ca2f7#acc.Ejt7nRkz',
       },
