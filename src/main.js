@@ -1,6 +1,6 @@
 import './style.css';
 import { brandLogo, esc, initCardGlow, initNetwork, initReveal, initTheme } from './common.js';
-import { articles, certifications, education, experience, socials, technologies } from './data.js';
+import { articles, certifications, education, experience, industries, socials, technologies } from './data.js';
 
 const GITHUB_USER = 'mariotristan';
 const REPO_COUNT = 6;
@@ -24,7 +24,22 @@ $('stats').innerHTML = [
   .join('');
 
 // About
-$('tech').innerHTML = technologies.map((t) => `<span>${esc(t)}</span>`).join('');
+$('industries').innerHTML = industries.map((industry) => `<li>${esc(industry)}</li>`).join('');
+$('tech').innerHTML = technologies
+  .map(
+    (group) => `<details class="tech-group">
+      <summary>
+        <span class="tech-group-label"><strong>${esc(group.area)}</strong><span>${group.items.length} technologies</span></span>
+        <span class="tech-preview" aria-hidden="true">${group.items.slice(0, 3)
+          .map(([, icon, format]) => brandLogo(`tech-${icon}`, '', format || 'svg')).join('')}</span>
+        <span class="tech-toggle" aria-hidden="true"></span>
+      </summary>
+      <ul>${group.items
+        .map(([name, icon, format]) => `<li>${brandLogo(`tech-${icon}`, '', format || 'svg')}<span>${esc(name)}</span></li>`)
+        .join('')}</ul>
+    </details>`,
+  )
+  .join('');
 
 // Experience
 $('timeline').innerHTML = experience

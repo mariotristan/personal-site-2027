@@ -334,6 +334,97 @@ h3 {
 .dots span:last-child::after {
   content: none;
 }
+.industry-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.industry-list li {
+  padding: 5px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--panel-2);
+  color: var(--text);
+  font-size: 14px;
+}
+.tech-groups {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+  align-items: start;
+  gap: 12px;
+}
+.tech-group {
+  padding: 18px;
+  border: 1px solid var(--card-line);
+  border-radius: 20px;
+  background: var(--panel-2);
+}
+.tech-group summary {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  list-style: none;
+}
+.tech-group summary::-webkit-details-marker {
+  display: none;
+}
+.tech-group summary:focus-visible {
+  outline: 3px solid var(--ice);
+  outline-offset: 4px;
+  border-radius: 6px;
+}
+.tech-group-label {
+  display: grid;
+  flex: 1;
+  gap: 2px;
+  color: var(--soft);
+  font-size: 14px;
+}
+.tech-group-label span {
+  color: var(--muted);
+  font-size: 12px;
+}
+.tech-preview {
+  display: flex;
+  gap: 4px;
+}
+.tech-toggle {
+  color: var(--ice);
+  font-size: 22px;
+  line-height: 1;
+}
+.tech-toggle::before {
+  content: '+';
+}
+.tech-group[open] .tech-toggle::before {
+  content: '−';
+}
+.tech-group ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 16px;
+}
+.tech-group li {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 4px 10px 4px 4px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--panel);
+  color: var(--text);
+  font-size: 13px;
+}
+.tech-group .brand-logo {
+  flex-basis: 26px;
+  width: 26px;
+  height: 26px;
+  padding: 3px;
+  border-radius: 7px;
+}
 
 section {
   padding: 70px 0;
