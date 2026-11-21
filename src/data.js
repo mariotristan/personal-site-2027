@@ -15,19 +15,64 @@ export const socials = [
   { label: 'Instagram', href: 'https://instagram.com/mariotristan' },
 ];
 
+export const industries = [
+  'Banking & financial services',
+  'Insurance',
+  'Retail',
+  'Food & beverage',
+  'Healthcare',
+  'Fitness',
+  'Telecommunications',
+];
+
 export const technologies = [
-  'Azure',
-  'AWS',
-  'Kubernetes',
-  'Kustomize',
-  'Docker',
-  'Jenkins',
-  'Ansible',
-  'Terraform',
-  'GitHub Actions',
-  'C#',
-  'Node',
-  'Angular',
+  {
+    area: 'Cloud',
+    items: [
+      ['Azure', 'microsoftazure'], ['AWS', 'amazonwebservices'], ['Google Cloud', 'googlecloud'],
+      ['Azure Networking', 'microsoftazure'], ['Azure Functions', 'microsoftazure'],
+      ['Azure App Service', 'microsoftazure'], ['Azure Blob Storage', 'microsoftazure'],
+      ['Azure API Management', 'microsoftazure'], ['Azure Active Directory', 'microsoftazure'],
+      ['Azure Cosmos DB', 'microsoftazure'], ['Power Platform', 'microsoftazure'],
+      ['Azure Kubernetes Service (AKS)', 'microsoftazure'],
+      ['AWS Networking', 'amazonwebservices'], ['Amazon CloudWatch', 'amazonwebservices'],
+      ['AWS CloudTrail', 'amazonwebservices'], ['Amazon EC2', 'amazonwebservices'],
+      ['Amazon ECS', 'amazonwebservices'], ['Amazon EKS', 'amazonwebservices'],
+      ['AWS Secrets Manager', 'amazonwebservices'], ['Amazon S3', 'amazonwebservices'],
+      ['Amazon RDS', 'amazonwebservices'],
+    ],
+  },
+  {
+    area: 'Containers',
+    items: [['Kubernetes', 'kubernetes'], ['Kustomize', 'kustomize', 'png'], ['Docker', 'docker']],
+  },
+  {
+    area: 'CI/CD',
+    items: [
+      ['GitHub', 'github'], ['GitHub Actions', 'githubactions'], ['Jenkins', 'jenkins'], ['TeamCity', 'teamcity'],
+      ['Octopus', 'octopusdeploy'], ['GitLab', 'gitlab'], ['Azure DevOps', 'azuredevops'],
+      ['AWS CodePipeline', 'amazonwebservices'],
+    ],
+  },
+  {
+    area: 'Automation',
+    items: [
+      ['Terraform', 'terraform'], ['Ansible', 'ansible'], ['Chef', 'chef'], ['Pulumi', 'pulumi'],
+      ['Bash', 'gnubash'], ['PowerShell', 'powershell'],
+    ],
+  },
+  {
+    area: 'Development',
+    items: [['C#', 'csharp'], ['Python', 'python'], ['Ruby', 'ruby'], ['Node.js', 'nodedotjs'], ['Angular', 'angular']],
+  },
+  {
+    area: 'Data',
+    items: [['SQL Server', 'microsoftsqlserver'], ['Oracle', 'oracle'], ['MySQL', 'mysql'], ['MongoDB', 'mongodb']],
+  },
+  {
+    area: 'Platforms',
+    items: [['Windows', 'windows'], ['Linux', 'linux'], ['Salesforce', 'salesforce'], ['SAP SuccessFactors', 'sap']],
+  },
 ];
 
 export const experience = [
@@ -305,7 +350,7 @@ export const resume = {
   email: 'mariotristan@outlook.com',
   linkedin: 'https://www.linkedin.com/in/mariotristan/',
   summary:
-    'Technology and delivery leader guiding cloud modernization and DevOps transformation across AWS, Azure, and Google Cloud. At Slalom, I lead client delivery and teams, support engagement financial health, and help deliver cloud migrations for multimillion-dollar accounts.',
+    'Technology and delivery leader guiding cloud modernization and DevOps transformation across AWS, Azure, and Google Cloud. At Slalom, I lead client delivery and teams, support engagement financial health, and help deliver cloud migrations for multimillion-dollar accounts. My experience spans banking and financial services, insurance, retail, food and beverage, healthcare, fitness, and telecommunications.',
   highlights: [
     {
       title: 'Cloud strategy',
@@ -494,7 +539,7 @@ export const resume = {
         ['Azure', 'microsoftazure'], ['AWS', 'amazonwebservices'], ['Google Cloud', 'googlecloud'],
       ],
       lines: [
-        'Azure (7 years): Networking, Functions, App Services, Blob Storage, API Management, Active Directory, Cosmos DB, Power Platform.',
+        'Azure (7 years): Networking, Functions, App Services, Blob Storage, API Management, Active Directory, Cosmos DB, Power Platform, AKS.',
         'AWS (6 years): Networking, Monitoring (CloudWatch and CloudTrail), EC2, ECS, EKS, Secrets Manager, S3, RDS.',
         'Multi-cloud strategy: led enterprise migrations and hybrid deployments across AWS, Azure, and GCP, aligning architecture with business outcomes.',
       ],
